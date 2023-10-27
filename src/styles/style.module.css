@@ -1,0 +1,186 @@
+:root {
+    --border-radius: var(--br , 10px);
+    --Orange :hsl(26, 100%, 55%);
+
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black :  hsl(0, 0%, 0%);
+}
+
+
+/*Constants */
+
+.flex {
+    width: var(--w , 100%);
+    display: flex;
+    gap: var(--gap , 0.5rem);
+    justify-content: var(--jc , unset);
+    align-items: var(--ai , unset);
+    flex-direction: var(--direction , row);
+}
+
+
+
+.spacing > * {
+    margin-bottom: 1rem;
+}
+
+.spacingLarge > * {
+     margin-bottom: 2rem;
+}
+
+.scaleControl > *  {
+    margin-top: 5rem;
+    --left : -4.5em;
+    --right : -4.5em;
+}
+
+
+/*Button */
+
+.btn {
+    cursor: pointer;
+}
+
+.button {
+    padding : 1.65rem 1rem;
+    border-radius: 11px;
+    gap: 0.5rem;
+}
+
+/*Positions */
+
+.right {
+    right: var(--right , -1.7em);
+}
+
+
+
+.left {
+    left: var(--left , -1.7rem);
+}
+
+/*Cart */
+
+.emptyCart {
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.PurchaseList {
+    --gap : 0.8rem;
+    --ai : center;
+}
+
+.quantityBox {
+    --jc :  space-between;
+    --ai : center;
+    border-radius: var(--border-radius);
+}
+
+/*NavBar */
+
+.NavItems {
+    --w : fit-content;
+    --gap: 1.2rem;
+    --ai: center;
+}
+
+.Menu {
+    --direction : column;
+    --gap : 1.2rem;
+}
+
+.UnorderedList {
+    --gap : 2rem;
+}
+
+/*Thumbnails */
+
+.thumbnailCont {
+    overflow: hidden;
+}
+
+.thumbnails:focus {
+    opacity: .4;
+}
+
+.thumbnails:hover {
+    opacity: 50%
+}
+
+.thumbnailCont {
+    background-color: rgba(255 , 255 , 255 , .8);
+}
+
+.thumbnailCont:focus-within {
+    border: 2px solid var(--Orange)
+}
+
+/*FocusedImg */
+
+.scale {
+    transform: scale(1.2);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+
+
+
+.ImgChangeWrap {
+    padding: 2.5rem;
+    margin: auto;
+    position: absolute;
+    --jc : space-between
+}
+
+.ImgFocused .ImgChangeWrap {
+    padding: .5rem;
+}
+
+.ImgFocused {
+    --jc :  center;
+    --ai : center;
+}
+
+/*Icons*/
+
+.right:hover .next {
+    stroke: var(--Orange);
+}
+
+.left:hover .previous {
+    stroke: var(--Orange);
+}
+
+
+.close path:hover {
+    fill: red;
+}
+
+/*General */
+
+.imgChange {
+    position: relative;
+    --jc: center;
+    --ai: center;
+}
+
+
+.img  > * {
+    border-radius: 11px;
+    width: 100%;
+}
